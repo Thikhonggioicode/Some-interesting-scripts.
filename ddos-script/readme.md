@@ -1,8 +1,6 @@
 # DDos Broker chạy trên mosquitto.
 
-# Được sử dụng trên Kali Linux Live 
-
-
+Được sử dụng trên Kali Linux Live 
 ## Step-by-step
 
 1. Update your kali linux.
