@@ -5,7 +5,7 @@ import time
 import random
 import string
 
-BROKER_IP = '192.168.110.170'
+BROKER_IP = 'broker-ip'
 BROKER_PORT = 1883
 
 def random_client_id(length=8):
