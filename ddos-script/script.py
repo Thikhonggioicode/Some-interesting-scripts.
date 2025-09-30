@@ -17,16 +17,14 @@ def flood_client():
         client = mqtt.Client(client_id=client_id)
         client.connect(BROKER_IP, BROKER_PORT, keepalive=60)
         client.loop_start()
-        # Liên tục publish message gây tải broker
-        for _ in range(100):
+        print(f"Client connected and flooding messages: {client_id}")
+
+        while True:
             topic = "test/topic"
             payload = ''.join(random.choices(string.ascii_letters + string.digits, k=50))
             client.publish(topic, payload)
-            time.sleep(0.01)
-        time.sleep(5)  # Giữ kết nối lâu để tăng tải
-        client.loop_stop()
-        client.disconnect()
-        print(f"Flooded client: {client_id}")
+            time.sleep(0.01)  # Tốc độ gửi message
+
     except Exception as e:
         print(f"Error client {client_id}: {e}")
 
