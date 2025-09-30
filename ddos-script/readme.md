@@ -18,7 +18,7 @@
 
 3. Download puho-mqtt (Yes! I recreate ddos script for IoT devices.)
 
-```sudo apt install-puho-mqtt```
+```sudo apt install python-paho-mqtt```
 
 4. Configurate and Enjoy.
 
